@@ -16,11 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from calculate.views import home, users, calculate
+from calculate.views import calculate
 
 urlpatterns = [
-    path('', home),
-    path('users/', users),
     path('<int:num1>/<str:action>/<int:num2>', calculate)
 ]
 
